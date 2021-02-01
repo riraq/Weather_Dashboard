@@ -13,40 +13,43 @@
         <h1 class="mx-auto">Weather Dashboard</h1>
     </nav>
 
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="row">
 
             <div class="col-3 h-100">
                 <div id="searchForm">
                     <h3>Search for a City</h3>
-                    <input id="searchInput">
+                    <input id="searchInput" class="w-75 mb-2">
                     <button id="searchBtn"><i class="fas fa-search"></i></button>
                 </div>
     
-                <div id="searchedCities">
+                <div id="searchedCities" class="d-grid gap-2">
                     <div>
-                        <span id="city1" class=""></span>
+                        <span id="city1" class="card text-center"></span>
                     </div>
                     <div>
-                        <span id="city2" class=""></span>
+                        <span id="city2" class="card text-center"></span>
                     </div>
                     <div>
-                        <span id="city3" class=""></span>
+                        <span id="city3" class="card text-center"></span>
                     </div>
                     <div>
-                        <span id="city4" class=""></span>
+                        <span id="city4" class="card text-center"></span>
                     </div>
                     <div>
-                        <span id="city5" class=""></span>
+                        <span id="city5" class="card text-center"></span>
                     </div>
                 </div>
             </div>
     
-            <div class="col-9">
+            <div class="col-9 ps-4">
                 <div class="row">
                     <div id="cityWeather">
-                        <p id="city"></p>
+                        <h3>
+                            <div id="city"></div>
+                            <img id="icon" src="">
+                        </h3>
                         <p id="temperature"></p>
                         <p id="humidity"></p>
                         <p id="windSpeed"></p>
@@ -57,33 +60,33 @@
                 <div class="row">
                     <h2>5-Day Forecast:</h2>
                         <div id="forecast">                        
-                            <span id="dayOne" class="col-2 card">
+                            <span id="dayOne" class="col-2 card w-15">
                                 <span class="date"></span>
-                                <img id="myImg" src="">
+                                <img src="">
                                 <span class="temperatureForecast"></span>
                                 <span class="humidityForecast"></span>
                             </span>
-                            <span id="dayTwo" class="col-2 card">
+                            <span id="dayTwo" class="col-2 card w-15">
                                 <span class="date"></span>
-                                <img id="myImg" src="">
+                                <img src="">
                                 <span class="temperatureForecast"></span>
                                 <span class="humidityForecast"></span>
                             </span>
-                            <span id="dayThree" class="col-2 card">
+                            <span id="dayThree" class="col-2 card w-15">
                                 <span class="date"></span>
-                                <img id="myImg" src="">
+                                <img src="">
                                 <span class="temperatureForecast"></span>
                                 <span class="humidityForecast"></span>
                             </span>
-                            <span id="dayFour" class="col-2 card">
+                            <span id="dayFour" class="col-2 card w-15">
                                 <span class="date"></span>
-                                <img id="myImg" src="">
+                                <img src="">
                                 <span class="temperatureForecast"></span>
                                 <span class="humidityForecast"></span>
                             </span>
-                            <span id="dayFive" class="col-2 card">
+                            <span id="dayFive" class="col-2 card w-15">
                                 <span class="date"></span>
-                                <img id="myImg" src="">
+                                <img src="">
                                 <span class="temperatureForecast"></span>
                                 <span class="humidityForecast"></span>
                             </span>

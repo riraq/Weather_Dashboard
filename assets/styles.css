@@ -2,10 +2,24 @@
     color: azure;
 }
 
-.card {
+.w-15 {
     color: white;
     float: left;
-    background-color: blue;
+    background-color: rgb(14, 186, 230);
     margin-left: 10px;
-
 }
+
+#city {
+    display: inline-block;
+}
+
+.border {
+    padding: 5px;
+    margin: 10px;
+}
+
+.col-3 {
+    background-color: bisque;
+    padding-bottom: 10px;
+}
+

@@ -156,9 +156,11 @@ searchBtn.addEventListener("click", function(event){
         var cityTemperature = document.querySelector("#temperature");
         var cityHumidity = document.querySelector("#humidity");
         var cityWindspeed = document.querySelector("#windSpeed");
+        var cityIcon = document.querySelector("#icon")
         var date = new Date().toLocaleDateString()
 
         cityName.textContent = data.name + " (" + date + ")";
+        cityIcon.src = "http://openweathermap.org/img/wn/" + data.weather[0].icon +"@2x.png";
         cityTemperature.textContent = "Temperature: " + data.main.temp + "°F";
         cityHumidity.textContent = "Humidity: " + data.main.humidity + " %";
         cityWindspeed.textContent = "Wind Speed: " + data.wind.speed  + " MPH";
