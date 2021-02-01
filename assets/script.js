@@ -175,6 +175,22 @@ searchBtn.addEventListener("click", function(event){
         .then(function(data){
             var cityUvIndex = document.querySelector("#uvIndex");
             cityUvIndex.textContent = "UV Index: " + data.value;
+            
+            if (data.value <=2){
+                cityUvIndex.setAttribute("class", "green");
+            }
+            else if (data.value > 2 || data.value <= 5){
+                cityUvIndex.setAttribute("class", "yellow");
+            }
+            else if (data.value > 5 || data.value <= 7){
+                cityUvIndex.setAttribute("class", "orange");
+            }
+            else if (data.value > 7 || data.value <= 10){
+                cityUvIndex.setAttribute("class", "red");
+            }
+            else if (data.value >10){
+                cityUvIndex.setAttribute("class", "violet");
+            }
         })
     });
 })
@@ -288,6 +304,22 @@ previousCityBtn.addEventListener("click", function(event){
         .then(function(data){
             var cityUvIndex = document.querySelector("#uvIndex");
             cityUvIndex.textContent = "UV Index: " + data.value;
+
+            if (data.value <=2){
+                cityUvIndex.setAttribute("class", "green");
+            }
+            else if (data.value > 2 || data.value <= 5){
+                cityUvIndex.setAttribute("class", "yellow");
+            }
+            else if (data.value > 5 || data.value <= 7){
+                cityUvIndex.setAttribute("class", "orange");
+            }
+            else if (data.value > 7 || data.value <= 10){
+                cityUvIndex.setAttribute("class", "red");
+            }
+            else if (data.value >10){
+                cityUvIndex.setAttribute("class", "violet");
+            }
         })
     });
 
@@ -399,9 +431,21 @@ function restoreForecast(restoredForecast){
             var cityUvIndex = document.querySelector("#uvIndex");
             cityUvIndex.textContent = "UV Index: " + data.value;
 
-            // if (data.value <=2){
-            //     cityUvIndex.style.background-color
-            // }
+            if (data.value <=2){
+                cityUvIndex.setAttribute("class", "green");
+            }
+            else if (data.value > 2 || data.value <= 5){
+                cityUvIndex.setAttribute("class", "yellow");
+            }
+            else if (data.value > 5 || data.value <= 7){
+                cityUvIndex.setAttribute("class", "orange");
+            }
+            else if (data.value > 7 || data.value <= 10){
+                cityUvIndex.setAttribute("class", "red");
+            }
+            else if (data.value >10){
+                cityUvIndex.setAttribute("class", "violet");
+            }
 
         })
     });

@@ -26,3 +26,33 @@
 .text-center {
     text-transform: capitalize;
 }
+
+.green{
+    color: white;
+    background-color: green;
+    display: initial;
+}
+
+.yellow{
+    color: black;
+    background-color: yellow;
+    display: initial;
+}
+
+.orange{
+    color: black;
+    background-color: orange;
+    display: initial;
+}
+
+.red{
+    color: black;
+    background-color: red;
+    display: initial;
+}
+
+.violet{
+    color: black;
+    background-color: violet;
+    display: initial;
+}
