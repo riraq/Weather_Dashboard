@@ -2,8 +2,36 @@ var weatherURL = "http://api.openweathermap.org/data/2.5/weather?q="
 var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q="
 // API Key - 6d57a13744a578704f3fd16ba8940763
 
+var cityOne = document.querySelector("#city1")
+var cityTwo = document.querySelector("#city2")
+var cityThree = document.querySelector("#city3")
+var cityFour = document.querySelector("#city4")
+var cityFive = document.querySelector("#city5")
+
 var searchBtn = document.querySelector("#searchBtn");
 
+var cityOneSearch = localStorage.getItem("cityone");
+var cityTwoSearch = localStorage.getItem("citytwo");
+var cityThreeSearch = localStorage.getItem("citythree");
+var cityFourSearch = localStorage.getItem("cityfour");
+var cityFiveSearch = localStorage.getItem("cityfive");
+
+if (cityOneSearch !== null){
+    cityOne.textContent = cityOneSearch
+}
+if (cityTwoSearch !== null){
+    cityTwo.textContent = cityTwoSearch
+}
+if (cityThreeSearch !== null){
+    cityThree.textContent = cityThreeSearch
+}
+if (cityFourSearch !== null){
+    cityFour.textContent = cityFourSearch
+}
+if (cityFiveSearch !== null){
+    cityFive.textContent = cityFiveSearch
+}
+console.log(cityOneSearch)
 
 // function for search button
 searchBtn.addEventListener("click", function(event){
@@ -11,6 +39,42 @@ searchBtn.addEventListener("click", function(event){
 
     
     var searchInput = document.querySelector("#searchInput")
+
+
+    if (cityOne.textContent === ""){
+        cityOne.textContent = searchInput.value
+        localStorage.setItem("cityone", searchInput.value);
+    }
+    else if (cityTwo.textContent === ""){
+        cityTwo.textContent = searchInput.value
+        localStorage.setItem("citytwo", searchInput.value);
+    }
+    else if (cityThree.textContent === ""){
+        cityThree.textContent = searchInput.value
+        localStorage.setItem("citythree", searchInput.value);
+    }
+    else if (cityFour.textContent === ""){
+        cityFour.textContent = searchInput.value
+        localStorage.setItem("cityfour", searchInput.value);
+    }
+    else if (cityFive.textContent === ""){
+        cityFive.textContent = searchInput.value
+        localStorage.setItem("cityfive", searchInput.value);
+    }
+    else {
+        cityOne.textContent = cityTwo.textContent
+        localStorage.setItem("cityone", cityOne.textContent);
+        cityTwo.textContent = cityThree.textContent
+        localStorage.setItem("citytwo", cityTwo.textContent);
+        cityThree.textContent = cityFour.textContent
+        localStorage.setItem("citythree", cityThree.textContent);
+        cityFour.textContent = cityFive.textContent
+        localStorage.setItem("cityfour", cityFour.textContent);
+        cityFive.textContent = searchInput.value
+        localStorage.setItem("cityfive", searchInput.value);
+    }
+
+    
     var cityWeatherURL = weatherURL + searchInput.value + "&units=imperial&appid=6d57a13744a578704f3fd16ba8940763"
     var cityForecastURL = forecastURL + searchInput.value + "&units=imperial&appid=6d57a13744a578704f3fd16ba8940763"
 

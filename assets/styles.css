@@ -1,0 +1,11 @@
+.navbar {
+    color: azure;
+}
+
+.card {
+    color: white;
+    float: left;
+    background-color: blue;
+    margin-left: 10px;
+
+}

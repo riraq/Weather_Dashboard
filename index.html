@@ -9,66 +9,91 @@
     <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Weather Dashboard</h1>
-    </header>
+    <nav class="navbar bg-primary">
+        <h1 class="mx-auto">Weather Dashboard</h1>
+    </nav>
 
-    <div id="searchForm">
-        <h3>Search for a City</h3>
-        <input id="searchInput">
-        <button id="searchBtn"><i class="fas fa-search"></i></button>
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-3 h-100">
+                <div id="searchForm">
+                    <h3>Search for a City</h3>
+                    <input id="searchInput">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+    
+                <div id="searchedCities">
+                    <div>
+                        <span id="city1" class=""></span>
+                    </div>
+                    <div>
+                        <span id="city2" class=""></span>
+                    </div>
+                    <div>
+                        <span id="city3" class=""></span>
+                    </div>
+                    <div>
+                        <span id="city4" class=""></span>
+                    </div>
+                    <div>
+                        <span id="city5" class=""></span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-9">
+                <div class="row">
+                    <div id="cityWeather">
+                        <p id="city"></p>
+                        <p id="temperature"></p>
+                        <p id="humidity"></p>
+                        <p id="windSpeed"></p>
+                        <p id="uvIndex"></p>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <h2>5-Day Forecast:</h2>
+                        <div id="forecast">                        
+                            <span id="dayOne" class="col-2 card">
+                                <span class="date"></span>
+                                <img id="myImg" src="">
+                                <span class="temperatureForecast"></span>
+                                <span class="humidityForecast"></span>
+                            </span>
+                            <span id="dayTwo" class="col-2 card">
+                                <span class="date"></span>
+                                <img id="myImg" src="">
+                                <span class="temperatureForecast"></span>
+                                <span class="humidityForecast"></span>
+                            </span>
+                            <span id="dayThree" class="col-2 card">
+                                <span class="date"></span>
+                                <img id="myImg" src="">
+                                <span class="temperatureForecast"></span>
+                                <span class="humidityForecast"></span>
+                            </span>
+                            <span id="dayFour" class="col-2 card">
+                                <span class="date"></span>
+                                <img id="myImg" src="">
+                                <span class="temperatureForecast"></span>
+                                <span class="humidityForecast"></span>
+                            </span>
+                            <span id="dayFive" class="col-2 card">
+                                <span class="date"></span>
+                                <img id="myImg" src="">
+                                <span class="temperatureForecast"></span>
+                                <span class="humidityForecast"></span>
+                            </span>
+                        </div>
+            </div>
+            </div>
+        </div>
+        
     </div>
 
-    <div id="searchedCities">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <div id="cityWeather">
-        <p id="city"></p>
-        <p id="temperature"></p>
-        <p id="humidity"></p>
-        <p id="windSpeed"></p>
-        <p id="uvIndex"></p>
-    </div>
-
-    <div id="forecast">
-        <h2>5-Day Forecast:</h2>
-        <span id="dayOne">
-            <span class="date"></span>
-            <img id="myImg" src="">
-            <span class="temperatureForecast"></span>
-            <span class="humidityForecast"></span>
-        </span>
-        <span id="dayTwo">
-            <span class="date"></span>
-            <img id="myImg" src="">
-            <span class="temperatureForecast"></span>
-            <span class="humidityForecast"></span>
-        </span>
-        <span id="dayThree">
-            <span class="date"></span>
-            <img id="myImg" src="">
-            <span class="temperatureForecast"></span>
-            <span class="humidityForecast"></span>
-        </span>
-        <span id="dayFour">
-            <span class="date"></span>
-            <img id="myImg" src="">
-            <span class="temperatureForecast"></span>
-            <span class="humidityForecast"></span>
-        </span>
-        <span id="dayFive">
-            <span class="date"></span>
-            <img id="myImg" src="">
-            <span class="temperatureForecast"></span>
-            <span class="humidityForecast"></span>
-        </span>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 </html>
