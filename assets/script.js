@@ -23,18 +23,23 @@ var cityFiveSearch = localStorage.getItem("cityfive");
 // if statements used to populate the search history if any cities are stored in local storage
 if (cityOneSearch !== null){
     cityOne.textContent = cityOneSearch
+    cityOne.style.removeProperty("display")
 }
 if (cityTwoSearch !== null){
     cityTwo.textContent = cityTwoSearch
+    cityTwo.style.removeProperty("display")
 }
 if (cityThreeSearch !== null){
     cityThree.textContent = cityThreeSearch
+    cityThree.style.removeProperty("display")
 }
 if (cityFourSearch !== null){
     cityFour.textContent = cityFourSearch
+    cityFour.style.removeProperty("display")
 }
 if (cityFiveSearch !== null){
     cityFive.textContent = cityFiveSearch
+    cityFive.style.removeProperty("display")
 }
 
 // function for search button
@@ -49,22 +54,27 @@ searchBtn.addEventListener("click", function(event){
     if (cityOne.textContent === ""){
         cityOne.textContent = searchInput
         localStorage.setItem("cityone", searchInput);
+        cityOne.style.removeProperty("display")
     }
     else if (cityTwo.textContent === ""){
         cityTwo.textContent = searchInput
         localStorage.setItem("citytwo", searchInput);
+        cityTwo.style.removeProperty("display")
     }
     else if (cityThree.textContent === ""){
         cityThree.textContent = searchInput
         localStorage.setItem("citythree", searchInput);
+        cityThree.style.removeProperty("display")
     }
     else if (cityFour.textContent === ""){
         cityFour.textContent = searchInput
         localStorage.setItem("cityfour", searchInput);
+        cityFour.style.removeProperty("display")
     }
     else if (cityFive.textContent === ""){
         cityFive.textContent = searchInput
         localStorage.setItem("cityfive", searchInput);
+        cityFive.style.removeProperty("display")
     }
     // makes the search history a max of five, removes the oldest searched city from list and adds the newest one when five cities are already listed
     else {
@@ -111,10 +121,12 @@ function getWeatherData(getCityWeather){
     })
     
     .then (function(data){
-                if (data === undefined || data.cod === "404"){
+        if (data === undefined || data.cod === "404"){
             return
         }
         
+        var visibleForecast = document.querySelector("#fiveDayForecast")
+        visibleForecast.style.removeProperty("display")
         // selectors for the parent of the forecast, used to manipulate children for each day
         var dayOne = document.querySelector("#dayOne");
         var dayTwo = document.querySelector("#dayTwo");
