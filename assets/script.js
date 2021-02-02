@@ -141,7 +141,7 @@ function getWeatherData(getCityWeather){
 
         // first day of forecast, replacing html content with current city forecast
         dayOne.children[0].textContent = dateTime;
-        dayOne.children[1].src = "http://openweathermap.org/img/wn/" + data.list[4].weather[0].icon +"@2x.png";
+        dayOne.children[1].src = "https://openweathermap.org/img/wn/" + data.list[4].weather[0].icon +"@2x.png";
         dayOne.children[2].textContent = "Temp: " + data.list[4].main.temp + " °F";
         dayOne.children[3].textContent = "Humidity: " + data.list[4].main.humidity + "%";
 
@@ -152,7 +152,7 @@ function getWeatherData(getCityWeather){
 
         // second day of forecast, replacing html content with current city forecast
         dayTwo.children[0].textContent = dateTime;
-        dayTwo.children[1].src = "http://openweathermap.org/img/wn/" + data.list[12].weather[0].icon +"@2x.png";
+        dayTwo.children[1].src = "https://openweathermap.org/img/wn/" + data.list[12].weather[0].icon +"@2x.png";
         dayTwo.children[2].textContent = "Temp: " + data.list[12].main.temp + " °F";
         dayTwo.children[3].textContent = "Humidity: " + data.list[12].main.humidity + "%";
         
@@ -163,7 +163,7 @@ function getWeatherData(getCityWeather){
 
         // third day of forecast, replacing html content with current city forecast
         dayThree.children[0].textContent = dateTime;
-        dayThree.children[1].src = "http://openweathermap.org/img/wn/" + data.list[20].weather[0].icon +"@2x.png";
+        dayThree.children[1].src = "https://openweathermap.org/img/wn/" + data.list[20].weather[0].icon +"@2x.png";
         dayThree.children[2].textContent = "Temp: " + data.list[20].main.temp + " °F";
         dayThree.children[3].textContent = "Humidity: " + data.list[20].main.humidity + "%";
 
@@ -174,7 +174,7 @@ function getWeatherData(getCityWeather){
 
         // fourth day of forecast, replacing html content with current city forecast
         dayFour.children[0].textContent = dateTime;
-        dayFour.children[1].src = "http://openweathermap.org/img/wn/" + data.list[28].weather[0].icon +"@2x.png";
+        dayFour.children[1].src = "https://openweathermap.org/img/wn/" + data.list[28].weather[0].icon +"@2x.png";
         dayFour.children[2].textContent = "Temp: " + data.list[28].main.temp + " °F";
         dayFour.children[3].textContent = "Humidity: " + data.list[28].main.humidity + "%";
 
@@ -185,7 +185,7 @@ function getWeatherData(getCityWeather){
 
         // fifth day of forecast, replacing html content with current city forecast
         dayFive.children[0].textContent = dateTime;
-        dayFive.children[1].src = "http://openweathermap.org/img/wn/" + data.list[36].weather[0].icon +"@2x.png";
+        dayFive.children[1].src = "https://openweathermap.org/img/wn/" + data.list[36].weather[0].icon +"@2x.png";
         dayFive.children[2].textContent = "Temp: " + data.list[36].main.temp + " °F";
         dayFive.children[3].textContent = "Humidity: " + data.list[36].main.humidity + "%";
     });
