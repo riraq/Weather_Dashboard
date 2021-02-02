@@ -1,6 +1,6 @@
 // beginning of url for calling current weather and forecast apis
-var weatherURL = "http://api.openweathermap.org/data/2.5/weather?q="
-var forecastURL = "http://api.openweathermap.org/data/2.5/forecast?q="
+var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q="
+var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q="
 // API Key - 6d57a13744a578704f3fd16ba8940763
 
 // variables used for calling the city elements in the html for adding a search history 
@@ -215,7 +215,7 @@ function getWeatherData(getCityWeather){
         
         // used to change the text in the html with the current weather data
         cityName.textContent = data.name + " (" + date + ")";
-        cityIcon.src = "http://openweathermap.org/img/wn/" + data.weather[0].icon +"@2x.png";
+        cityIcon.src = "https://openweathermap.org/img/wn/" + data.weather[0].icon +"@2x.png";
         cityTemperature.textContent = "Temperature: " + data.main.temp + "°F";
         cityHumidity.textContent = "Humidity: " + data.main.humidity + " %";
         cityWindspeed.textContent = "Wind Speed: " + data.wind.speed  + " MPH";
@@ -223,7 +223,7 @@ function getWeatherData(getCityWeather){
         // takes the latitude and longitude data from the weather data to be used in getting the uv index data with another call
         var cityLon = data.coord.lon;
         var cityLat = data.coord.lat;
-        var uvIndexURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + cityLat + "&lon=" + cityLon + "&appid=6d57a13744a578704f3fd16ba8940763"
+        var uvIndexURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + cityLat + "&lon=" + cityLon + "&appid=6d57a13744a578704f3fd16ba8940763"
         
         // fetch statement used to get uvindex, 
         fetch(uvIndexURL)
